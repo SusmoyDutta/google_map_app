@@ -83,7 +83,7 @@ class _MapAppBarState extends State<MapAppBar> {
           ),
           Marker(
             markerId: const MarkerId('My current location'),
-            position: LatLng(position!.latitude, position!.longitude),
+            position: LatLng(position?.latitude??0, position?.longitude??0),
             infoWindow: InfoWindow(
               title: 'My current location',
               snippet:
@@ -96,7 +96,7 @@ class _MapAppBarState extends State<MapAppBar> {
           Polyline(
             polylineId: const PolylineId('mgo'),
             points: [
-              LatLng(position!.latitude, position!.longitude),
+              LatLng(position?.latitude??0, position?.longitude??0),
               const LatLng(23.811538370969107, 90.41898358112373),
             ],
             width: 3,
